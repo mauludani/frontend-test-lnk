@@ -1,0 +1,28 @@
+/* Login.css */
+
+body {
+    background: linear-gradient(to right, #0062E6, #33AEFF);
+}
+
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+    color: #0062E6;
+}
+
+.form-control {
+    border-radius: 50px;
+}
+
+.btn-primary {
+    background-color: #0062E6;
+    border: none;
+    border-radius: 50px;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #0053c7;
+}
