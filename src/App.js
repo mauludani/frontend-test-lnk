@@ -35,7 +35,7 @@ const App = () => {
           )}
         />
         <Route
-          path="/dashboard"
+          path="/dashboard/*"
           element={user ? (
             <Dashboard onLogout={handleLogout} />
           ) : (

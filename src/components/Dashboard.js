@@ -1,6 +1,9 @@
 import React from 'react';
-import { Button, Container } from 'react-bootstrap';
-import { useNavigate } from 'react-router-dom';
+import { Container, Button } from 'react-bootstrap';
+import Sidebar from './Sidebar';
+import { Routes, Route, useNavigate } from 'react-router-dom';
+import CalendarPage from './CalendarPage';
+import './Dashboard.css';
 
 const Dashboard = ({ onLogout }) => {
   const navigate = useNavigate();
@@ -12,12 +15,20 @@ const Dashboard = ({ onLogout }) => {
   };
 
   return (
-    <Container>
-      <h2>Dashboard</h2>
-      <Button variant="danger" onClick={handleLogout}>
-        Logout
-      </Button>
-    </Container>
+    <div className="d-flex">
+      <Sidebar />
+      <Container className="content">
+        <Routes>
+          <Route path="/" element={<h2>Welcome to the Dashboard</h2>} />
+          <Route path="profile" element={<h2>Profile Page</h2>} />
+          <Route path="settings" element={<h2>Settings Page</h2>} />
+          <Route path="calendar" element={<CalendarPage />} />
+        </Routes>
+        <Button variant="danger" onClick={handleLogout}>
+          Logout
+        </Button>
+      </Container>
+    </div>
   );
 };
 
