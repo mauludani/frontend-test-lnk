@@ -20,7 +20,7 @@ const Dashboard = ({ onLogout }) => {
     <div className="d-flex">
       <Sidebar />
       <Container className="content">
-        {location.pathname === '/dashboard/calendar' && (
+        {location.pathname === '/dashboard' && (
           <div className="text-end mb-3">
             <Button variant="primary" onClick={() => navigate('/dashboard/email')}>
               Send Email
@@ -28,8 +28,7 @@ const Dashboard = ({ onLogout }) => {
           </div>
         )}
         <Routes>
-          <Route path="/" element={<h2>Welcome to the Dashboard</h2>} />
-          <Route path="calendar" element={<CalendarPage />} />
+          <Route path="/" element={<CalendarPage />} />
           <Route path="email" element={<EmailForm />} />
         </Routes>
         <Button variant="danger" className="mt-2" onClick={handleLogout}>

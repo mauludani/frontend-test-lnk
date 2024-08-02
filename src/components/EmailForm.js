@@ -70,7 +70,7 @@ const EmailForm = () => {
                     />
                 </Form.Group>
 
-                <Button variant="primary" type="submit">
+                <Button variant="primary" className='mt-2' type="submit">
                     Send
                 </Button>
             </Form>
